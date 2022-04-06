@@ -17,6 +17,7 @@ module.exports = {
             const voiceChannel = await guild.channels.create("⏳ | " + member.user.username, {
                 type: "GUILD_VOICE",
                 parent: newChannel.parent,
+                bitrate: 96,
             });
 
             client.voiceGenerator.set(member.id, voiceChannel.id);
